@@ -3,7 +3,7 @@ print("✨✨✨✨Welcome to The Guess Word Game 👾✨✨✨✨".center(100))
 print()
 # user choice for the level
 def main():
-  user_choice = input("choose the level  Easy , Medium , Hard ").lower()
+  user_choice = input("choose the level  Easy , Medium , Hard ").lower().strip()
   if user_choice == "easy":
       easy()
   elif user_choice == "medium":
