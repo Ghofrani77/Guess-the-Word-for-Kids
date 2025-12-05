@@ -38,7 +38,7 @@ def easy ():
      print('word',i+1," What do you think ? ")
 
      # ask the user to guess the word
-     user_guess = input(answer_format).lower()
+     user_guess = input(answer_format).lower().strip()
 
      # check if the guess is correct
      if user_guess == secret_word:
@@ -51,7 +51,7 @@ def easy ():
         attempt -= 1
         if attempt>0:
             print("❌Wrong guess, try again ", attempt,"/3 attempts")
-            user_guess = input(answer_format).lower()
+            user_guess = input(answer_format).lower().strip()
             if user_guess == secret_word:
                 print("✅ Correct!".center(50))
             print()
@@ -61,7 +61,7 @@ def easy ():
 
 
     print("🌟 Great job! You're ready for the next level! \n", "would you like to try level medium  ?")
-    user_choice= input("Yes or No ? ").lower() # ask if user want to move to the next level
+    user_choice= input("Yes or No ? ").lower().strip()# ask if user want to move to the next level
     if user_choice=="yes":
         medium()
     else:
@@ -92,7 +92,7 @@ def medium():
         print('word',i+1," What do you think ? ")
 
         # ask the user to guess the word
-        user_guess = input(answer_format).lower()
+        user_guess = input(answer_format).lower().strip()
 
         # check if the guess is correct
         if user_guess == secret_word:
@@ -103,7 +103,7 @@ def medium():
             attempt -= 1
             if attempt > 0:
                 print("❌Wrong guess, try again ", attempt,"/4 attempts")
-                user_guess = input(answer_format).lower()
+                user_guess = input(answer_format).lower().strip()
                 if user_guess == secret_word:
                     print("✅ Correct!".center(50))
                 print()
@@ -113,7 +113,7 @@ def medium():
 
 
     print("🌟 Excellent! You're ready for the Hard level! \n", " would you like to try level hard ?")
-    user_choice = input("Yes or No ? ").lower()
+    user_choice = input("Yes or No ? ").lower().strip()
     if user_choice == "yes":
        hard()
     else:
@@ -146,7 +146,7 @@ def hard():
         print('word',i+1," What do you think ? ")
 
         # ask the user to guess the word
-        user_guess = input(answer_format).lower()
+        user_guess = input(answer_format).lower().strip()
 
         # check if the guess is correct
         if user_guess == secret_word:
@@ -157,7 +157,7 @@ def hard():
             attempt -= 1
             if attempt > 0:
                 print("❌Wrong guess, try again ", attempt,"/5attempts")
-                user_guess = input(answer_format).lower()
+                user_guess = input(answer_format).lower().strip()
                 if user_guess == secret_word:
                     print("✅ Correct!".center(50))
                 print()
